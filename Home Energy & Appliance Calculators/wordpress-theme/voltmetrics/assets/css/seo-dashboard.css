@@ -1,0 +1,340 @@
+/* ==========================================================================
+   VoltMetrics - Rank Math SEO Dashboard Styles
+   Live Audit Inspector, SERP Snippet Preview, Score Dial
+   ========================================================================== */
+
+/* Floating Badge in Bottom Right */
+.rank-math-floating-badge {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--slate-900);
+    border: 1px solid var(--slate-700);
+    border-radius: var(--radius-pill);
+    padding: 6px 14px 6px 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.rank-math-floating-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-color: var(--emerald-500);
+}
+
+.rm-score-circle {
+    position: relative;
+    width: 36px;
+    height: 36px;
+}
+
+.rm-circular-chart {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.rm-circle-bg {
+    fill: none;
+    stroke: var(--slate-700);
+    stroke-width: 3.8;
+}
+
+.rm-circle {
+    fill: none;
+    stroke: var(--emerald-500);
+    stroke-width: 3.8;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.8s ease;
+}
+
+.rm-score-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--white);
+    font-family: var(--font-heading);
+}
+
+.rm-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.rm-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.rm-status {
+    font-size: 0.6875rem;
+    color: var(--emerald-400);
+    font-weight: 600;
+}
+
+.rm-view-btn {
+    background: var(--slate-800);
+    color: var(--slate-200);
+    border: 1px solid var(--slate-700);
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.15s;
+}
+
+.rm-view-btn:hover {
+    background: var(--emerald-600);
+    color: var(--white);
+    border-color: var(--emerald-600);
+}
+
+/* ==========================================================================
+   Full SEO Dashboard Page
+   ========================================================================== */
+.seo-dashboard-wrapper {
+    padding: 40px 0 80px;
+}
+
+.seo-dash-header {
+    background: var(--slate-900);
+    color: var(--white);
+    padding: 36px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.sd-title-wrap h1 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.sd-subtitle {
+    color: var(--slate-400);
+    font-size: 0.9375rem;
+}
+
+.sd-score-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--slate-800);
+    border: 1px solid var(--slate-700);
+    padding: 16px 24px;
+    border-radius: var(--radius-md);
+}
+
+.sd-dial {
+    width: 64px;
+    height: 64px;
+    position: relative;
+}
+
+.sd-dial-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--white);
+    font-family: var(--font-heading);
+}
+
+.sd-score-status strong {
+    display: block;
+    font-size: 1.125rem;
+    color: var(--emerald-400);
+}
+
+.sd-score-status span {
+    font-size: 0.8125rem;
+    color: var(--slate-400);
+}
+
+/* Dashboard 2-Col Layout */
+.sd-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+}
+
+.sd-card {
+    background: var(--white);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 24px;
+}
+
+.sd-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* SERP Preview Simulator */
+.serp-container {
+    background: var(--slate-50);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin-top: 12px;
+}
+
+.serp-toggle-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.serp-toggle-btn {
+    background: var(--white);
+    border: 1px solid var(--slate-300);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.serp-toggle-btn.active {
+    background: var(--slate-900);
+    color: var(--white);
+    border-color: var(--slate-900);
+}
+
+.google-serp-box {
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 600px;
+}
+
+.serp-url-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8125rem;
+    color: #202124;
+    margin-bottom: 4px;
+}
+
+.serp-favicon {
+    width: 16px;
+    height: 16px;
+    background: var(--emerald-600);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.serp-domain {
+    font-size: 0.75rem;
+    color: #202124;
+    font-weight: 500;
+}
+
+.serp-breadcrumb {
+    color: #5f6368;
+    font-size: 0.75rem;
+}
+
+.serp-title {
+    color: #1a0dab;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 6px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.serp-title:hover {
+    text-decoration: underline;
+}
+
+.serp-snippet {
+    color: #4d5156;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+/* Rank Math Checklist */
+.rm-checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rm-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    border-radius: var(--radius-md);
+    background: var(--slate-50);
+    border: 1px solid var(--border-subtle);
+}
+
+.rm-check-item.passed {
+    border-left: 4px solid var(--emerald-500);
+}
+
+.rm-check-item.warning {
+    border-left: 4px solid var(--amber-500);
+}
+
+.check-icon-pass {
+    color: var(--emerald-600);
+    font-size: 1.125rem;
+    line-height: 1;
+}
+
+.check-content {
+    flex-grow: 1;
+}
+
+.check-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--slate-800);
+    display: block;
+}
+
+.check-desc {
+    font-size: 0.75rem;
+    color: var(--slate-500);
+    margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+    .sd-grid {
+        grid-template-columns: 1fr;
+    }
+}

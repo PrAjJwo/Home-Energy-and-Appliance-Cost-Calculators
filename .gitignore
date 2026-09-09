@@ -1,0 +1,113 @@
+# ==============================================================================
+# Git Ignore Configuration - Home Energy & Appliance Cost Calculators
+# ==============================================================================
+
+# Operating System Files
+# ------------------------------------------------------------------------------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE & Text Editor Files
+# ------------------------------------------------------------------------------
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.sublime-workspace
+*.sublime-project
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+*~
+
+# Node.js & Package Managers
+# ------------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Python & Testing Artifacts
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Binary Dependencies & Temporary Archives
+# ------------------------------------------------------------------------------
+scripts/bin/
+**/scripts/bin/
+bin/
+*.exe
+*.dll
+*.tar.gz
+*.bak
+*.tmp
+
+# Allow WordPress theme distribution zip
+!voltmetrics-theme.zip
+!**/voltmetrics-theme.zip
+
+# WordPress Runtime, Caching, & Temporary Files
+# ------------------------------------------------------------------------------
+*.log
+**/wp-content/debug.log
+**/wp-content/cache/
+**/wp-content/upgrade/
+**/wp-content/backups/
+**/wp-content/backup-db/
+**/wp-content/uploads/rank-math/
+
+# Database Journals & Locks
+# ------------------------------------------------------------------------------
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+**/wp-content/database/*.sqlite-journal
+**/wp-content/database/*.sqlite-wal
+**/wp-content/database/*.sqlite-shm
+
+# Local Environment & Secrets
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

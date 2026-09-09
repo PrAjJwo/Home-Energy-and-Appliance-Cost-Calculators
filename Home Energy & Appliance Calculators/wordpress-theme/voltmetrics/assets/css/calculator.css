@@ -1,0 +1,598 @@
+/* ==========================================================================
+   VoltMetrics - Calculator Styles
+   Interactive Inputs, Range Sliders, Dynamic Results Cards, Presets
+   ========================================================================== */
+
+.calculator-wrapper {
+    background: var(--white);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    padding: 32px;
+    margin-bottom: 40px;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 36px;
+    align-items: start;
+}
+
+/* Preset Picker */
+.calc-presets-section {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.presets-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.presets-title {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--slate-800);
+}
+
+.presets-hint {
+    font-size: 0.75rem;
+    color: var(--emerald-600);
+    font-weight: 600;
+}
+
+.presets-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--slate-300) transparent;
+}
+
+.preset-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-pill);
+    padding: 8px 14px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--slate-700);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.preset-chip:hover {
+    background: var(--emerald-50);
+    border-color: var(--emerald-300);
+    color: var(--emerald-800);
+    transform: translateY(-1px);
+}
+
+.preset-chip.is-selected {
+    background: var(--emerald-600);
+    border-color: var(--emerald-600);
+    color: var(--white);
+    box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
+}
+
+.preset-chip-icon {
+    font-size: 1rem;
+}
+
+/* Input Fields & Groups */
+.calc-inputs-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.calc-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.calc-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calc-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--slate-800);
+}
+
+.calc-value-badge {
+    background: var(--slate-100);
+    color: var(--slate-900);
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+    font-family: var(--font-heading);
+}
+
+.calc-value-badge.highlight {
+    background: var(--emerald-50);
+    color: var(--emerald-700);
+    border-color: var(--emerald-200);
+}
+
+.calc-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.calc-number-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--slate-50);
+    border: 1.5px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--slate-900);
+    outline: none;
+    transition: all 0.2s ease;
+    font-family: var(--font-body);
+}
+
+.calc-number-input:focus {
+    background: var(--white);
+    border-color: var(--emerald-500);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.input-suffix {
+    position: absolute;
+    right: 16px;
+    color: var(--slate-400);
+    font-size: 0.875rem;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* Custom Range Slider */
+.calc-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--slate-200);
+    outline: none;
+    margin-top: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.calc-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--emerald-600);
+    cursor: pointer;
+    border: 3px solid var(--white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.calc-range::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    background: var(--emerald-700);
+}
+
+.calc-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--emerald-600);
+    cursor: pointer;
+    border: 3px solid var(--white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.calc-help {
+    font-size: 0.75rem;
+    color: var(--slate-500);
+}
+
+/* Quick State Tariffs Dropdown */
+.state-selector-box {
+    background: var(--slate-50);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    margin-top: 4px;
+}
+
+.state-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--slate-300);
+    border-radius: var(--radius-sm);
+    background: var(--white);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--slate-700);
+    outline: none;
+}
+
+/* ==========================================================================
+   Results Sidebar Card
+   ========================================================================== */
+.calc-results-col {
+    background: var(--slate-900);
+    color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    position: sticky;
+    top: 96px;
+    box-shadow: var(--shadow-xl);
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--slate-800);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.results-title {
+    color: var(--white);
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.results-badge {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--emerald-400);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: var(--radius-pill);
+    text-transform: uppercase;
+}
+
+/* Highlight Cost Card */
+.cost-card-primary {
+    background: linear-gradient(145deg, #132338 0%, #0c1827 100%);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cost-card-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--emerald-500), var(--amber-500));
+}
+
+.cost-period-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--slate-400);
+    margin-bottom: 4px;
+}
+
+.cost-big-number {
+    font-family: var(--font-heading);
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.1;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2px;
+}
+
+.cost-currency-symbol {
+    font-size: 1.625rem;
+    color: var(--emerald-400);
+    font-weight: 700;
+}
+
+.cost-sub-kwh {
+    font-size: 0.8125rem;
+    color: var(--slate-400);
+    margin-top: 6px;
+}
+
+/* Breakdown Grid */
+.results-breakdown-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.breakdown-box {
+    background: var(--slate-800);
+    border: 1px solid var(--slate-700);
+    border-radius: var(--radius-md);
+    padding: 12px 14px;
+}
+
+.bb-label {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--slate-400);
+    margin-bottom: 4px;
+}
+
+.bb-value {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--white);
+    display: block;
+}
+
+.bb-sub {
+    font-size: 0.6875rem;
+    color: var(--slate-400);
+}
+
+/* Energy Star Comparison Section */
+.comparison-section {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.comparison-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.star-icon {
+    color: var(--amber-400);
+}
+
+.comparison-title {
+    font-size: 0.8125rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--emerald-400);
+    letter-spacing: 0.05em;
+}
+
+.comparison-savings-text {
+    font-size: 0.875rem;
+    color: var(--slate-300);
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.savings-highlight {
+    color: var(--emerald-400);
+    font-weight: 800;
+}
+
+/* Carbon Metric */
+.carbon-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--slate-800);
+    border: 1px solid var(--slate-700);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+    margin-bottom: 20px;
+}
+
+.carbon-icon {
+    font-size: 1.5rem;
+}
+
+.carbon-details {
+    flex-grow: 1;
+}
+
+.carbon-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--slate-400);
+}
+
+.carbon-value {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--emerald-400);
+}
+
+.calc-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-share {
+    width: 100%;
+    background: var(--slate-800);
+    color: var(--white);
+    border: 1px solid var(--slate-700);
+}
+
+.btn-share:hover {
+    background: var(--slate-700);
+}
+
+/* ==========================================================================
+   Content & Reference Tables
+   ========================================================================== */
+.calc-content-section {
+    padding: 40px 0 60px;
+}
+
+.calc-content-card {
+    background: var(--white);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 30px;
+}
+
+.content-heading-2 {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+    color: var(--slate-900);
+}
+
+.content-heading-3 {
+    font-size: 1.25rem;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: var(--slate-800);
+}
+
+.content-p {
+    font-size: 1rem;
+    color: var(--slate-700);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.formula-box {
+    background: var(--slate-50);
+    border-left: 4px solid var(--emerald-600);
+    padding: 16px 20px;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin: 20px 0;
+    font-family: monospace;
+    font-size: 0.9375rem;
+    color: var(--slate-900);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin: 24px 0;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.data-table th {
+    background: var(--slate-100);
+    color: var(--slate-800);
+    padding: 12px 16px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--border-subtle);
+}
+
+.data-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--slate-700);
+}
+
+.data-table tr:hover td {
+    background: var(--slate-50);
+}
+
+/* FAQ Accordion */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.faq-item {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 16px 20px;
+    text-align: left;
+    background: none;
+    border: none;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--slate-800);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.15s;
+}
+
+.faq-question:hover {
+    background: var(--slate-50);
+}
+
+.faq-answer {
+    padding: 0 20px 16px;
+    font-size: 0.9375rem;
+    color: var(--slate-600);
+    line-height: 1.6;
+    display: none;
+}
+
+.faq-item.is-active .faq-answer {
+    display: block;
+}
+
+.faq-item.is-active .faq-question {
+    color: var(--emerald-700);
+}
+
+@media (max-width: 900px) {
+    .calc-grid {
+        grid-template-columns: 1fr;
+    }
+    .calc-results-col {
+        position: static;
+    }
+    .calculator-wrapper {
+        padding: 20px;
+    }
+}

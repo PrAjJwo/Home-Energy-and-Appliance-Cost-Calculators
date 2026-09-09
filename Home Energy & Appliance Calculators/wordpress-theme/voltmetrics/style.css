@@ -1,0 +1,12 @@
+/*
+Theme Name: VoltMetrics
+Theme URI: https://voltmetrics.com
+Author: VoltMetrics Energy Solutions
+Author URI: https://voltmetrics.com
+Description: Dedicated WordPress theme for VoltMetrics home energy and appliance calculators.
+Version: 1.0.0
+Text Domain: voltmetrics
+*/
+
+/* Core styles are loaded via functions.php or imported here */
+@import url('assets/css/style.css');
