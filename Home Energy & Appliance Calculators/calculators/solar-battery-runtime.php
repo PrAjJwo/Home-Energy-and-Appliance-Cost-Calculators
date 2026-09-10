@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Solar Battery Runtime Calculator - Home Energy Storage Hours";
-$meta_description = "Calculate how long your home solar battery storage will power essential loads during a blackout. Sizing models for Tesla Powerwall, Enphase, and LiFePO4.";
+$page_title = "Solar Battery Runtime Calculator - Home Backup Duration";
+$meta_description = "Use our solar battery runtime calculator to estimate home backup duration in hours and days based on battery kWh capacity, critical loads, and solar replenishment.";
 $focus_keyword = "solar battery runtime calculator";
 $canonical_path = "calculators/solar-battery-runtime.php";
 

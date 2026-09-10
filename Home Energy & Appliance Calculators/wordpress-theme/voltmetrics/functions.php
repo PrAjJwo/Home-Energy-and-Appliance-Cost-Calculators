@@ -44,5 +44,9 @@ function voltmetrics_load_global_config() {
     if (file_exists($rates_path)) {
         require_once $rates_path;
     }
+    $rank_math_path = get_template_directory() . '/inc/rank-math-integration.php';
+    if (file_exists($rank_math_path)) {
+        require_once $rank_math_path;
+    }
 }
 add_action('init', 'voltmetrics_load_global_config');

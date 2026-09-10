@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Portable Power Station Runtime Calculator - Jackery & EcoFlow Sizing";
-$meta_description = "Calculate portable power station runtime in hours and device recharges based on battery watt-hours (Wh), inverter efficiency, and appliance wattage.";
+$page_title = "Portable Power Station Runtime Calculator (2026 Wh)";
+$meta_description = "Accurate portable power station runtime calculator with 85% inverter efficiency and Depth of Discharge (DoD) modeling for EcoFlow, Jackery, and Bluetti.";
 $focus_keyword = "portable power station runtime calculator";
 $canonical_path = "calculators/portable-power-station-runtime.php";
 

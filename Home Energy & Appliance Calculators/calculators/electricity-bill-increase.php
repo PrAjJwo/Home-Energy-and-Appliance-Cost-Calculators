@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Electricity Bill Increase Calculator - Tariff Spikes & New Loads";
-$meta_description = "Calculate how much your electricity bill will increase when adding an EV, hot tub, pool pump, or after a utility rate hike. Model tiered tariff penalties.";
+$page_title = "Electricity Bill Increase Calculator - Tariff Spikes (2026)";
+$meta_description = "Use this electricity bill increase calculator to forecast utility bill spikes from new appliances, EVs, heat pumps, or higher tiered kilowatt-hour tariffs.";
 $focus_keyword = "electricity bill increase calculator";
 $canonical_path = "calculators/electricity-bill-increase.php";
 

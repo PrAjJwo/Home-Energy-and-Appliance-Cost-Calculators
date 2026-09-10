@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Pool Pump Electricity Calculator - Single vs Variable Speed Savings";
-$meta_description = "Calculate swimming pool pump electricity costs per day, month, and season. Compare single-speed motor energy waste versus variable-speed pump savings.";
+$page_title = "Pool Pump Electricity Calculator - Variable Speed (2026)";
+$meta_description = "Calculate operating costs with our pool pump electricity calculator. Compare single-speed pumps against high-efficiency variable-speed pumps for savings.";
 $focus_keyword = "pool pump electricity calculator";
 $canonical_path = "calculators/pool-pump-electricity.php";
 

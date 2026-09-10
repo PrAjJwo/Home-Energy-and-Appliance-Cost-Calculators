@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Refrigerator Energy Cost Calculator - Fridge Power Usage & ROI";
-$meta_description = "Calculate refrigerator electricity running costs by cubic feet, compressor duty cycle, and Energy Star tier. Estimate savings when upgrading an older fridge.";
+$page_title = "Refrigerator Energy Cost Calculator - 2026 Fridge Power";
+$meta_description = "Free refrigerator energy cost calculator to estimate monthly fridge power bills, compare Energy Star models, and calculate old refrigerator replacement ROI.";
 $focus_keyword = "refrigerator energy cost calculator";
 $canonical_path = "calculators/refrigerator-energy-cost.php";
 

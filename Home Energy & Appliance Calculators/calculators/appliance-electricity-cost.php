@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Appliance Electricity Cost Calculator - Power Usage & Bill Estimator";
-$meta_description = "Calculate how much electricity your home appliances consume per day, month, and year. Compare Energy Star savings with accurate 2026 utility rates.";
+$page_title = "Appliance Electricity Cost Calculator - 2026 Power Usage";
+$meta_description = "Free appliance electricity cost calculator to estimate kWh usage and power bills for 50+ home appliances. Compare Energy Star savings with 2026 tariffs.";
 $focus_keyword = "appliance electricity cost calculator";
 $canonical_path = "calculators/appliance-electricity-cost.php";
 
@@ -71,7 +71,7 @@ $custom_schema = [
                                 data-watts="<?php echo $preset['watts']; ?>"
                                 data-hours="<?php echo $preset['hours_per_day']; ?>"
                                 data-duty="<?php echo $preset['duty_cycle']; ?>"
-                                data-savings="<?php echo $preset['energy_star_savings_pct']; ?>">
+                                data-savings="<?php echo $preset['estimated_efficiency_improvement_pct'] ?? $preset['energy_star_savings_pct'] ?? 15; ?>">
                             <span class="preset-chip-icon"><?php echo $preset['icon']; ?></span>
                             <span><?php echo htmlspecialchars($preset['name']); ?></span>
                         </button>

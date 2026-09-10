@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Space Heater Cost Calculator - Electric Heating Bill Estimator";
-$meta_description = "Calculate how much it costs to run a 1,500W electric space heater per hour, night, month, and winter. Compare zone heating versus whole-home furnace heating.";
+$page_title = "Space Heater Cost Calculator - 1500W Power Bill (2026)";
+$meta_description = "Calculate 750W to 1500W electric heater costs per hour, night, and month with our space heater cost calculator. Discover thermostat cycling economics.";
 $focus_keyword = "space heater cost calculator";
 $canonical_path = "calculators/space-heater-cost.php";
 

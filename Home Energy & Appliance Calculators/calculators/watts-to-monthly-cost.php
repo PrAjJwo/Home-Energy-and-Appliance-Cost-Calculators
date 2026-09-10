@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Watts to Monthly Cost Calculator - Power Usage Bill Estimator";
-$meta_description = "Convert wattage directly to monthly electricity costs. Calculate cost per hour, day, month, and year with 2026 residential tariff benchmarks.";
+$page_title = "Watts to Monthly Cost Calculator - 2026 Power Converter";
+$meta_description = "Convert wattage into daily and monthly utility bill impacts with our watts to monthly cost calculator. Instant kWh conversion for any household device.";
 $focus_keyword = "watts to monthly cost calculator";
 $canonical_path = "calculators/watts-to-monthly-cost.php";
 

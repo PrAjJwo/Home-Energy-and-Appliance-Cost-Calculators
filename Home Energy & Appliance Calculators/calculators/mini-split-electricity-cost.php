@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Mini-Split Electricity Cost Calculator - Inverter Heat Pump";
-$meta_description = "Calculate ductless mini-split electricity running costs for heating and cooling. Compare inverter efficiency, SEER2/HSPF2 ratings, and monthly bills.";
+$page_title = "Mini-Split Electricity Cost Calculator (SEER2 & HSPF2)";
+$meta_description = "Free mini-split electricity cost calculator for ductless heat pumps. Model seasonal cooling and winter heating expenses with modern SEER2 and HSPF2 metrics.";
 $focus_keyword = "mini-split electricity cost calculator";
 $canonical_path = "calculators/mini-split-electricity-cost.php";
 

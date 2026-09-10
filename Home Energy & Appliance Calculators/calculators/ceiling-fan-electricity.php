@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Ceiling Fan Electricity Calculator - Fan Power Cost & AC Savings";
-$meta_description = "Calculate ceiling fan electricity operating costs per day and month. See how raising your AC thermostat with the wind-chill effect saves money.";
+$page_title = "Ceiling Fan Electricity Calculator (2026 Power Cost)";
+$meta_description = "Our ceiling fan electricity calculator estimates hourly, daily, and monthly operating costs. Discover how the wind-chill effect saves on AC cooling bills.";
 $focus_keyword = "ceiling fan electricity calculator";
 $canonical_path = "calculators/ceiling-fan-electricity.php";
 

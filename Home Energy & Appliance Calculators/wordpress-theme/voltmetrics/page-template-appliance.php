@@ -60,7 +60,7 @@ if (empty($APPLIANCE_PRESETS)) {
                                 data-watts="<?php echo esc_attr($preset['watts']); ?>"
                                 data-hours="<?php echo esc_attr($preset['hours_per_day']); ?>"
                                 data-duty="<?php echo esc_attr($preset['duty_cycle']); ?>"
-                                data-savings="<?php echo esc_attr($preset['energy_star_savings_pct']); ?>">
+                                data-savings="<?php echo esc_attr($preset['estimated_efficiency_improvement_pct'] ?? $preset['energy_star_savings_pct'] ?? 15); ?>">
                             <span class="preset-chip-icon"><?php echo $preset['icon']; ?></span>
                             <span><?php echo esc_html($preset['name']); ?></span>
                         </button>

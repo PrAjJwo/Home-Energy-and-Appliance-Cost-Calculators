@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Generator Fuel Cost Calculator - Gasoline, Propane & Diesel";
-$meta_description = "Calculate generator fuel costs per hour, day, and extended storm blackout. Compare gasoline, diesel, and propane fuel expenses during power outages.";
+$page_title = "Generator Fuel Cost Calculator - Gas, Propane & Diesel";
+$meta_description = "Accurate generator fuel cost calculator to estimate hourly, daily, and storm outage fuel expenses across gas, propane, and natural gas emergency generators.";
 $focus_keyword = "generator fuel cost calculator";
 $canonical_path = "calculators/generator-fuel-cost.php";
 

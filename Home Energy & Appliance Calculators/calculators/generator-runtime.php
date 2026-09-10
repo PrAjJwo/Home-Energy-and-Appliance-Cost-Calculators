@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Generator Runtime Calculator - Fuel Tank Hours Estimator";
-$meta_description = "Calculate portable and standby generator runtime hours per tank of fuel based on electrical load percentage, tank capacity, and wattage draw.";
+$page_title = "Generator Runtime Calculator - Hours Per Tank (2026)";
+$meta_description = "Our generator runtime calculator estimates operating hours per tank across 25%, 50%, and 100% electrical loads for gas, propane, and diesel generators.";
 $focus_keyword = "generator runtime calculator";
 $canonical_path = "calculators/generator-runtime.php";
 

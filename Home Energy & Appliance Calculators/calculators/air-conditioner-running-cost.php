@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Air-Conditioner Running Cost Calculator - SEER Cooling Estimator";
-$meta_description = "Calculate central AC, window unit, and mini-split electricity costs per hour, month, and summer season with SEER ratings and 2026 tariff benchmarks.";
+$page_title = "Air Conditioner Running Cost Calculator (2026 SEER2)";
+$meta_description = "Use our air conditioner running cost calculator to estimate central AC and window unit electricity costs per hour, month, and summer season with 2026 rates.";
 $focus_keyword = "air conditioner running cost calculator";
 $canonical_path = "calculators/air-conditioner-running-cost.php";
 

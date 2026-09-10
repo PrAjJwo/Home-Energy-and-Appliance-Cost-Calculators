@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "Heat Pump Savings Calculator - Oil, Gas & Electric Heat Comparison";
-$meta_description = "Calculate how much money a modern heat pump saves versus heating oil, propane, electric baseboard, and natural gas. Model 10-year fuel savings.";
+$page_title = "Heat Pump Savings Calculator - Baseboard vs Heat Pump";
+$meta_description = "Use our heat pump savings calculator to model annual heating bill reductions when switching from electric resistance baseboards to high-COP heat pumps.";
 $focus_keyword = "heat pump savings calculator";
 $canonical_path = "calculators/heat-pump-savings.php";
 

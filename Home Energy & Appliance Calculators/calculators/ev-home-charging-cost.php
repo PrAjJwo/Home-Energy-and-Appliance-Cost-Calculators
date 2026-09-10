@@ -3,8 +3,8 @@ require_once __DIR__ . '/../config/site_config.php';
 require_once __DIR__ . '/../config/rates.php';
 require_once __DIR__ . '/../includes/seo_helper.php';
 
-$page_title = "EV Home-Charging Cost Calculator - Electric Car Charging Bill";
-$meta_description = "Calculate electric vehicle home charging costs per full charge, per mile, and per month. Compare Level 1 vs Level 2 charging and annual gasoline fuel savings.";
+$page_title = "EV Home Charging Cost Calculator - 2026 Electric Car Bill";
+$meta_description = "Calculate EV charging costs per full charge, per mile, and per month with our ev home charging cost calculator. Compare Level 1 vs Level 2 and gas savings.";
 $focus_keyword = "ev home charging cost calculator";
 $canonical_path = "calculators/ev-home-charging-cost.php";
 
